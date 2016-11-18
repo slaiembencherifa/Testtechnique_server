@@ -42,7 +42,7 @@ server_delete:
 
 version_delete:
     path:     /versiondelete/{id}/{server}
-    defaults: { _controller: testServerBundle:Server:delete }
+    defaults: { _controller: testServerBundle:Server:deleteVersion }
 versionstoadd:
     path:     /versiontoadd/{id}
     defaults: { _controller: testServerBundle:Version:index2 }

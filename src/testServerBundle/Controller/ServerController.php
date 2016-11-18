@@ -147,15 +147,17 @@ class ServerController extends Controller
             'server' => $server,
             'versions' => $versions));
     }
-    public function deleteVersionAction( $server, $id){
+    public function deleteVersionAction(  $id,$server){
         $em = $this->getDoctrine()->getManager();
         $version = $em->getRepository('testServerBundle:Version')->find($id);
         $serveur = $em->getRepository('testServerBundle:Server')->find($server);
         $serveur->removeVersion($version);
+        $em->persist($serveur);
+        $em->flush();
 
         return $this->render('server/showversions.html.twig', array(
             'server' => $serveur,
-            'versions' => $server->getVersionsimplementees()));
+            'versions' => $serveur->getVersionsimplementees()));
 }
 
 }
