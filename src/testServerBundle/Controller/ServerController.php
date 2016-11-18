@@ -45,7 +45,7 @@ class ServerController extends Controller
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $serveurs = $em->getRepository('CompanyBundle:Sprint')->findAll();
+        $serveurs = $em->getRepository('CompanyBundle:Server')->findAll();
         return $this->render('CompanyBundle:Server:show.html.twig',array('serveurs'=>$serveurs));
     }
 

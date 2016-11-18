@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            <state relative-caret-position="288">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
                 <element signature="e#132#189#0#PHP" expanded="true" />
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
@@ -87,7 +87,17 @@
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoftwareController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/SoftwareController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -143,9 +153,10 @@
         <option value="$PROJECT_DIR$/src/testServerBundle/Form/ServerType.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Form/VersionType.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Form/SoftwareType.php" />
-        <option value="$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php" />
-        <option value="$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/show.html.twig" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/testServerBundle/Controller/SoftwareController.php" />
+        <option value="$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php" />
       </list>
     </option>
   </component>
@@ -444,7 +455,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479470278801</updated>
-      <workItem from="1479470280728" duration="1160000" />
+      <workItem from="1479470280728" duration="1593000" />
     </task>
     <servers />
   </component>
@@ -454,11 +465,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1160000" />
+    <option name="totallyTimeSpent" value="1593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -550,6 +561,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/SoftwareControlle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/SoftwareController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/testServerBundle/Form/SoftwareType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -563,28 +606,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        <state relative-caret-position="288">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
             <element signature="e#132#189#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
