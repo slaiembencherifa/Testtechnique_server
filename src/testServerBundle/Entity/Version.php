@@ -40,8 +40,8 @@ class Version
      */
     protected $numvers;
     /**
-     * @ORM\ManyToOne(targetEntity="testServerBundle\Entity\Software", inversedBy="versions")
-     * @ORM\JoinColumn(name="software_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="testServerBundle\Entity\Software", inversedBy="versions" )
+     * @ORM\JoinColumn(name="software_id", referencedColumnName="id",onDelete="CASCADE")
      */
 
     protected $software;

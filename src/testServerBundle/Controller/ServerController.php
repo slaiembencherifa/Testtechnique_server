@@ -3,6 +3,7 @@
 namespace testServerBundle\Controller;
 
 use testServerBundle\Entity\Server;
+use testServerBundle\Entity\Version;
 use testServerBundle\Repository\ServerRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -140,10 +141,21 @@ class ServerController extends Controller
     public function listversionsAction(Server $server)
     {
 
-        $versions=$server->getVersions();
+        $versions=$server->getVersionsimplementees();
 
         return $this->render('server/showversions.html.twig', array(
             'server' => $server,
             'versions' => $versions));
     }
+    public function deleteVersionAction( $server, $id){
+        $em = $this->getDoctrine()->getManager();
+        $version = $em->getRepository('testServerBundle:Version')->find($id);
+        $serveur = $em->getRepository('testServerBundle:Server')->find($server);
+        $serveur->removeVersion($version);
+
+        return $this->render('server/showversions.html.twig', array(
+            'server' => $serveur,
+            'versions' => $server->getVersionsimplementees()));
+}
+
 }

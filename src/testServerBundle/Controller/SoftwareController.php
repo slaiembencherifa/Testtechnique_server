@@ -133,4 +133,14 @@ class SoftwareController extends Controller
             ->getForm()
         ;
     }
+/*lister les versions d'un logiciel*/
+    public function listversionsAction(Software $software)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $versions = $em->getRepository('testServerBundle:Version')->findBySoftware($software);
+
+        return $this->render('software/showversions.html.twig', array(
+            'software' => $software,
+            'versions' => $versions));
+    }
 }

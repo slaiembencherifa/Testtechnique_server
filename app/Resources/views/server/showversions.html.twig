@@ -18,7 +18,8 @@
                 <td><a href="{{ path('version_show', { 'id': version.id }) }}">{{ version.id }}</a></td>
                 <td>{{ version.nom }}</td>
                 <td>{{ version.numvers }}</td>
-                <td>{{ version.software }}</td>
+                <td>{{ version.software.nom }}</td>
+                <td><a href="{{ path('version_delete',{'id':version.id,'server':server.id}) }}">Supprimer</a></td>
 
             </tr>
         {% else %}
@@ -27,9 +28,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('server_new') }}">Create a new server</a>
-        </li>
-    </ul>
+
 {% endblock %}

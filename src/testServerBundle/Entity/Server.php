@@ -17,21 +17,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Server
 {
     /**
-     * @return mixed
-     */
-    public function getVersions()
-    {
-        return $this->versions;
-    }
-
-    /**
-     * @param mixed $versions
-     */
-    public function setVersions($versions)
-    {
-        $this->versions = $versions;
-    }
-    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\generatedValue(strategy="AUTO")
@@ -39,7 +24,7 @@ class Server
     protected $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="\testServerBundle\Entity\Version", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="\testServerBundle\Entity\Version", cascade={"remove"})
      *
      */
     protected $versionsimplementees;
@@ -81,13 +66,6 @@ class Server
      * @ORM\Column(name="modele", type="string", length=255, nullable=true,)
      */
     protected $modele;
-    /**
-     * @ORM\OneToMany(targetEntity="testServerBundle\Entity\Version", mappedBy="id", cascade={"all"})
-     * @ORM\JoinColumn(nullable=true, onDelete="CASCADE")
-     */
-
-    protected $versions;
-
 
     /**
      * @return mixed

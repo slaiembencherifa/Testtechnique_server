@@ -32,6 +32,9 @@
             <a href="{{ path('software_edit', { 'id': software.id }) }}">Edit</a>
         </li>
         <li>
+            <a href="{{ path('test_server_newversion', { 'id': software.id }) }}">ajouter une version</a>
+        </li>
+        <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}

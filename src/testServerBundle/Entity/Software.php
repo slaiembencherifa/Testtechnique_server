@@ -43,12 +43,7 @@ class Software
      * @ORM\Column(name="description", type="string", length=255, nullable=true,)
      */
     protected $description;
-    /**
-     * @ORM\OneToMany(targetEntity="testServerBundle\Entity\Version", mappedBy="id", cascade={"all"})
-     * @ORM\JoinColumn(nullable=true, onDelete="CASCADE")
-     */
 
-    protected $versions;
 
 
     /**

@@ -21,7 +21,36 @@ test_server_editserver:
 test_server_editsoftware:
     path:     /editsoftware/{id}
     defaults: { _controller: testServerBundle:Software:edit }
+test_server_editversion:
+    path:     /editversion/{id}
+    defaults: { _controller: testServerBundle:Version:edit }
 
 server_listofversions:
     path:     /serverlist/{id}
     defaults: { _controller: testServerBundle:Server:listversions }
+
+software_listofversions:
+    path:     /softwarelist/{id}
+    defaults: { _controller: testServerBundle:Software:listversions }
+software_delete:
+    path:     /softwaredelete/{id}
+    defaults: { _controller: testServerBundle:Software:delete }
+
+server_delete:
+    path:     /serverdelete/{id}
+    defaults: { _controller: testServerBundle:Server:delete }
+
+version_delete:
+    path:     /versiondelete/{id}/{server}
+    defaults: { _controller: testServerBundle:Server:delete }
+versionstoadd:
+    path:     /versiontoadd/{id}
+    defaults: { _controller: testServerBundle:Version:index2 }
+
+version_ajout:
+    path:     /versionajout/{id}/{serveur}
+    defaults: { _controller: testServerBundle:Version:addToServer }
+
+
+
+

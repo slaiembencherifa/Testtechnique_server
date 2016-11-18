@@ -2,6 +2,7 @@
 
 namespace testServerBundle\Controller;
 
+use testServerBundle\Entity\Server;
 use testServerBundle\Entity\Version;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -30,7 +31,17 @@ class VersionController extends Controller
             'versions' => $versions,
         ));
     }
+/*pour choisir une version à ajouter à un serveur */
+    public function index2Action($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $serveur= $em->getRepository('testServerBundle:Server')->find($id);
+        $versions = $em->getRepository('testServerBundle:Version')->findAll();
 
+        return $this->render('version/index.html.twig', array(
+            'versions' => $versions,'serveur'=>$serveur
+        ));
+    }
     /**
      * Creates a new version entity.
      *
@@ -51,7 +62,7 @@ class VersionController extends Controller
             $em->persist($version);
             $em->flush($version);
 
-            return $this->redirectToRoute('version_show', array('id' => $version->getId()));
+            return $this->redirectToRoute('software_index', array('id' => $version->getId()));
         }
 
         return $this->render('version/new.html.twig', array(
@@ -135,5 +146,11 @@ class VersionController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+    public function addToServerAction(   $id,$server){
+        $em = $this->getDoctrine()->getManager();
+        $version = $em->getRepository('testServerBundle:Version')->find($id);
+        $serveur = $em->getRepository('testServerBundle:Server')->find($server);
+        $serveur->addVersion($version);
     }
 }
