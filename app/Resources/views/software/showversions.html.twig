@@ -18,16 +18,14 @@
                 <td><a href="{{ path('version_show', { 'id': version.id }) }}">{{ version.id }}</a></td>
                 <td>{{ version.nom }}</td>
                 <td>{{ version.numvers }}</td>
-                <td>{{ version.software.nom }}</td>
-                <td><a href="{{ path('version_delete',{'id':version.id,'server':server.id}) }}">Supprimer</a></td>
 
             </tr>
         {% else %}
-        <h2>Pas de logiciel implémenté</h2>
+        <h2>Pas de version implémentée</h2>
         {% endfor %}
         </tbody>
     </table>
     <li>
-        <a href="{{ path('server_index') }}">Retour à la liste des serveurs</a>
+        <a href="{{ path('software_index') }}">Retour à la liste des logiciels</a>
     </li>
 {% endblock %}

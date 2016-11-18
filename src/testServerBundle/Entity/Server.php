@@ -137,6 +137,7 @@ class Server
             return;
         }
         $this->versionsimplementees->add($version);
+        $version->addHote($this);
     }
     /*retirer une version d'un serveur*/
 

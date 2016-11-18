@@ -102,7 +102,7 @@ class VersionController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('version_edit', array('id' => $version->getId()));
+            return $this->redirectToRoute('software_index');
         }
 
         return $this->render('version/edit.html.twig', array(
@@ -147,10 +147,12 @@ class VersionController extends Controller
             ->getForm()
         ;
     }
-    public function addToServerAction(   $id,$server){
+    public function addToServerAction(   $id,$idserveur){
         $em = $this->getDoctrine()->getManager();
         $version = $em->getRepository('testServerBundle:Version')->find($id);
-        $serveur = $em->getRepository('testServerBundle:Server')->find($server);
+        $serveur = $em->getRepository('testServerBundle:Server')->find($idserveur);
         $serveur->addVersion($version);
+        return $this->redirectToRoute('server_listofversions', array('id' => $serveur->getId()))
+            ;
     }
 }

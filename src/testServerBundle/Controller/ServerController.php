@@ -91,7 +91,7 @@ class ServerController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('server_edit', array('id' => $server->getId()));
+            return $this->redirectToRoute('server_index');
         }
 
         return $this->render('server/edit.html.twig', array(

@@ -9,6 +9,7 @@
 namespace testServerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use testServerBundle\Entity\Server;
 /**
  * @ORM\Entity
  * @ORM\Table(name="Version")
@@ -45,6 +46,9 @@ class Version
      */
 
     protected $software;
+
+    /** @ORM\ManyToMany(targetEntity="\testServerBundle\Entity\Server") */
+    protected $serveurhotes;
 
     /**
      * @return string
@@ -110,4 +114,27 @@ class Version
         $this->nom = $nom;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getServeurhotes()
+    {
+        return $this->serveurhotes;
+    }
+
+    /**
+     * @param mixed $serveurhotes
+     */
+    public function setServeurhotes($serveurhotes)
+    {
+        $this->serveurhotes = $serveurhotes;
+    }
+    public function addHote(\testServerBundle\Entity\Server $server)
+    {
+        if ($this->serveurhotes->contains($server)) {
+            return;
+        }
+        $this->serveurhotes->add($server);
+        $server->addVersion($this);
+    }
 }

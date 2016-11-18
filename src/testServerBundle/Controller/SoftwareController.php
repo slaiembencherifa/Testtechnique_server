@@ -67,6 +67,7 @@ class SoftwareController extends Controller
     {
         $deleteForm = $this->createDeleteForm($software);
 
+
         return $this->render('software/show.html.twig', array(
             'software' => $software,
             'delete_form' => $deleteForm->createView(),
@@ -88,7 +89,7 @@ class SoftwareController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('software_edit', array('id' => $software->getId()));
+            return $this->redirectToRoute('software_index');
         }
 
         return $this->render('software/edit.html.twig', array(

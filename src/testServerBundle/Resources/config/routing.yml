@@ -48,7 +48,7 @@ versionstoadd:
     defaults: { _controller: testServerBundle:Version:index2 }
 
 version_ajout:
-    path:     /versionajout/{id}/{serveur}
+    path:     /versionajout/{id}/{idserveur}
     defaults: { _controller: testServerBundle:Version:addToServer }
 
 
