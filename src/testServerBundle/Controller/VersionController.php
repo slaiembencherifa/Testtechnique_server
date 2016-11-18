@@ -152,6 +152,8 @@ class VersionController extends Controller
         $version = $em->getRepository('testServerBundle:Version')->find($id);
         $serveur = $em->getRepository('testServerBundle:Server')->find($idserveur);
         $serveur->addVersion($version);
+        $em->persist($serveur);
+        $em->flush();
         return $this->redirectToRoute('server_listofversions', array('id' => $serveur->getId()))
             ;
     }
