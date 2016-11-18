@@ -6,6 +6,7 @@
  * Date: 18/11/2016
  * Time: 11:26
  */
+namespace testServerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 /**

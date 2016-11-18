@@ -1,3 +1,11 @@
 test_server_homepage:
     path:     /
     defaults: { _controller: testServerBundle:Default:index }
+
+test_server_newserver:
+    path:     /newserver
+    defaults: { _controller: testServerBundle:Server:add }
+
+test_server_newsoftware:
+    path:     /newsoftware
+    defaults: { _controller: testServerBundle:Software:add }

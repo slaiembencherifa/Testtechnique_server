@@ -3,15 +3,13 @@
  * Created by PhpStorm.
  * User: sloum
  * Date: 18/11/2016
- * Time: 13:22
+ * Time: 13:26
  */
 
 namespace testServerBundle\Controller;
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class SoftwareController extends Controller
+class VersionController
 {
 
     public function addAction(Request $request){
@@ -23,6 +21,7 @@ class SoftwareController extends Controller
         $form->handleRequest($request);
         if($request->getMethod()=='POST'){
             if ($form->isValid()) {
+
                 $em = $this->getDoctrine()->getManager();
 
                 $entityk=$form->getData();
@@ -35,17 +34,15 @@ class SoftwareController extends Controller
 
 
 
-                return $this->render('testserverBundle:Software:new.html.twig',array('form'=>$form->createView()));
+                return $this->render('testServerBundle:Version:new.html.twig',array('form'=>$form->createView()));
             }}
-        return $this->render('CompanyBundle:Software:new.html.twig',array('form'=>$form->createView()));
+        return $this->render('testServerBundle:Version:new.html.twig',array('form'=>$form->createView()));
 
     }
     public function showAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $softwares = $em->getRepository('CompanyBundle:Software')->findAll();
-        return $this->render('CompanyBundle:Software:show.html.twig',array('softwares'=>$softwares));
+        $versions = $em->getRepository('CompanyBundle:Version')->findAll();
+        return $this->render('testServerBundle:Version:show.html.twig',array('versions'=>$versions));
     }
-
-
 }

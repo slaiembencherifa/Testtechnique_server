@@ -6,6 +6,7 @@
  * Date: 18/11/2016
  * Time: 11:47
  */
+namespace testServerBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -28,7 +29,7 @@ class VersionType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'test\serverBundle\Entity\Version'
+            'data_class' => 'testServerBundle\Entity\Version'
         ));
     }
     /**
