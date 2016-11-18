@@ -1,15 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <h1>liste des versions</h1>
+{% block titre %}Liste Serveurs{% endblock %}
 
-    <table>
-        <thead>
+{% block body %}
+
+<!-- /.row -->
+<div class="row">
+
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                List Serveurs
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+                {% if not versions %}
+
+                <h2>vous n'avez aucune version !!!</h2>
+
+                {% else %}
+
+
+                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
                 <th>numéro de version</th>
                 <th>Logiciel</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -22,12 +42,9 @@
                 <td><a href="{{ path('version_delete',{'id':version.id,'server':server.id}) }}">Supprimer</a></td>
 
             </tr>
-        {% else %}
-        <h2>Pas de logiciel implémenté</h2>
-        {% endfor %}
+{% endfor %}
         </tbody>
     </table>
-    <li>
-        <a href="{{ path('server_index') }}">Retour à la liste des serveurs</a>
-    </li>
+{% endif %}
+
 {% endblock %}

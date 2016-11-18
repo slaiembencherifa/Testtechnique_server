@@ -50,7 +50,7 @@ class ServerController extends Controller
             $em->persist($server);
             $em->flush($server);
 
-            return $this->redirectToRoute('server_show', array('id' => $server->getId()));
+            return $this->redirectToRoute('server_index');
         }
 
         return $this->render('server/new.html.twig', array(

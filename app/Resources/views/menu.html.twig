@@ -1,0 +1,41 @@
+
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+
+                <li>
+                    <a href="{{ path('test_server_homepage') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-server fa-fw"></i> Serveur<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="{{ path('server_index') }}">Liste Serveur</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('server_new') }}">Ajouter Serveur</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-cogs fa-fw"></i> Logiciel<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="{{ path('software_index') }}">Liste Logiciels</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('software_new') }}">Ajouter Logiciel</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
