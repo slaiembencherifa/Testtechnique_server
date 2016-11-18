@@ -1,43 +1,38 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: sloum
- * Date: 18/11/2016
- * Time: 11:47
- */
 namespace testServerBundle\Form;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SoftwareType extends AbstractType
-{   /**
- * @param FormBuilderInterface $builder
- * @param array $options
- */
+{
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
-        $builder
-            ->add('nom')
-            ->add('editeur')
-            ->add('description');
+        $builder->add('nom')->add('editeur')->add('description')        ;
     }
+    
     /**
-     * @param OptionsResolverInterface $resolver
+     * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => 'testServerBundle\Entity\Software'
         ));
     }
+
     /**
-     * @return string
+     * {@inheritdoc}
      */
-    public function getName()
+    public function getBlockPrefix()
     {
-        return 'testserverBundle_software';
+        return 'testserverbundle_software';
     }
+
+
 }

@@ -1,3 +1,15 @@
+test_server_software:
+    resource: "@testServerBundle/Controller/SoftwareController.php"
+    type:     annotation
+
+test_server_server:
+    resource: "@testServerBundle/Controller/ServerController.php"
+    type:     annotation
+
+test_server_version:
+    resource: "@testServerBundle/Controller/VersionController.php"
+    type:     annotation
+
 test_server:
     resource: "@testServerBundle/Resources/config/routing.yml"
     prefix:   /

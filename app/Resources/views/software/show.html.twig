@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Software</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ software.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ software.nom }}</td>
+            </tr>
+            <tr>
+                <th>Editeur</th>
+                <td>{{ software.editeur }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ software.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('software_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('software_edit', { 'id': software.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

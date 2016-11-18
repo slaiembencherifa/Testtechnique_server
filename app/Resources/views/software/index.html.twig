@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Softwares list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Editeur</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for software in softwares %}
+            <tr>
+                <td><a href="{{ path('software_show', { 'id': software.id }) }}">{{ software.id }}</a></td>
+                <td>{{ software.nom }}</td>
+                <td>{{ software.editeur }}</td>
+                <td>{{ software.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('software_show', { 'id': software.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('software_edit', { 'id': software.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('software_new') }}">Create a new software</a>
+        </li>
+    </ul>
+{% endblock %}

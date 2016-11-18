@@ -44,13 +44,29 @@ class Version
      * @ORM\JoinColumn(name="software_id", referencedColumnName="id")
      */
 
-    protected $project;
+    protected $software;
     /**
      * @return string
      */
     public function getNumvers()
     {
         return $this->numvers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSoftware()
+    {
+        return $this->software;
+    }
+
+    /**
+     * @param mixed $software
+     */
+    public function setSoftware($software)
+    {
+        $this->software = $software;
     }
 
     /**

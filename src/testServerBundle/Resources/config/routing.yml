@@ -4,8 +4,24 @@ test_server_homepage:
 
 test_server_newserver:
     path:     /newserver
-    defaults: { _controller: testServerBundle:Server:add }
+    defaults: { _controller: testServerBundle:Server:new }
 
 test_server_newsoftware:
     path:     /newsoftware
-    defaults: { _controller: testServerBundle:Software:add }
+    defaults: { _controller: testServerBundle:Software:new }
+
+test_server_newversion:
+    path:     /newversion/{id}
+    defaults: { _controller: testServerBundle:Version:new }
+
+test_server_editserver:
+    path:     /editserver/{id}
+    defaults: { _controller: testServerBundle:Server:edit }
+
+test_server_editsoftware:
+    path:     /editsoftware/{id}
+    defaults: { _controller: testServerBundle:Software:edit }
+
+server_listofversions:
+    path:     /serverlist/{id}
+    defaults: { _controller: testServerBundle:Server:listversions }

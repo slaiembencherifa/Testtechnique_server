@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>liste des versions</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>numéro de version</th>
+                <th>Logiciel</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for version in versionss %}
+            <tr>
+                <td><a href="{{ path('version_show', { 'id': version.id }) }}">{{ version.id }}</a></td>
+                <td>{{ version.nom }}</td>
+                <td>{{ version.numvers }}</td>
+                <td>{{ version.software }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('server_new') }}">Create a new server</a>
+        </li>
+    </ul>
+{% endblock %}
