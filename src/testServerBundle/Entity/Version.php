@@ -45,6 +45,7 @@ class Version
      */
 
     protected $software;
+
     /**
      * @return string
      */

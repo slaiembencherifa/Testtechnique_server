@@ -17,11 +17,49 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Server
 {
     /**
+     * @return mixed
+     */
+    public function getVersions()
+    {
+        return $this->versions;
+    }
+
+    /**
+     * @param mixed $versions
+     */
+    public function setVersions($versions)
+    {
+        $this->versions = $versions;
+    }
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\generatedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="\testServerBundle\Entity\Version", cascade={"persist"})
+     *
+     */
+    protected $versionsimplementees;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection|Version[]
+     */
+    public function getVersionsimplementees()
+    {
+        return $this->versionsimplementees;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection|Version[] $versionsimplementees
+     */
+    public function setVersionsimplementees($versionsimplementees)
+    {
+        $this->versionsimplementees = $versionsimplementees;
+    }
+
     /**
      * @Assert\NotBlank()
      * @var string
@@ -114,6 +152,19 @@ class Server
     {
         $this->modele = $modele;
     }
+/* ajouter une version au serveur */
+    public function addVersion(\testServerBundle\Entity\Version $version)
+    {
+        if ($this->versionsimplementees->contains($version)) {
+            return;
+        }
+        $this->versionsimplementees->add($version);
+    }
+    /*retirer une version d'un serveur*/
 
+    public function removeVersion(\testServerBundle\Entity\Version $version)
+    {
+        $this->versionsimplementees->removeElement($version);
+    }
 
 }

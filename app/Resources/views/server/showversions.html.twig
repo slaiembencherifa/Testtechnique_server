@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for version in versionss %}
+        {% for version in versions %}
             <tr>
                 <td><a href="{{ path('version_show', { 'id': version.id }) }}">{{ version.id }}</a></td>
                 <td>{{ version.nom }}</td>
@@ -21,6 +21,8 @@
                 <td>{{ version.software }}</td>
 
             </tr>
+        {% else %}
+        <h2>Pas de logiciel implémenté</h2>
         {% endfor %}
         </tbody>
     </table>

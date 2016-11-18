@@ -34,8 +34,8 @@
       <file leaf-file-name="Version.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Entity/Version.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+            <state relative-caret-position="267">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
                 <element signature="e#124#156#0#PHP" expanded="true" />
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+            <state relative-caret-position="264">
+              <caret line="142" column="40" selection-start-line="142" selection-start-column="40" selection-end-line="142" selection-end-column="40" />
               <folding>
                 <element signature="e#47#82#0#PHP" expanded="true" />
               </folding>
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Server.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testServerBundle/Entity/Server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+            <state relative-caret-position="211">
+              <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
               <folding>
                 <element signature="e#7#88#0#PHP" expanded="true" />
                 <element signature="e#124#156#0#PHP" expanded="true" />
@@ -72,8 +72,8 @@
       <file leaf-file-name="showversions.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/server/showversions.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="194">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -147,15 +147,15 @@
         <option value="$PROJECT_DIR$/src/testServerBundle/Resources/views/Server/new.html.twig" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Repository/ServerRepository.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Repository/SoftwareRepository.php" />
-        <option value="$PROJECT_DIR$/src/testServerBundle/Entity/Version.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Controller/VersionController.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Form/VersionType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/server/index.html.twig" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Repository/VersionRepository.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/server/showversions.html.twig" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php" />
+        <option value="$PROJECT_DIR$/src/testServerBundle/Entity/Version.php" />
         <option value="$PROJECT_DIR$/src/testServerBundle/Entity/Server.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/server/showversions.html.twig" />
       </list>
     </option>
   </component>
@@ -597,7 +597,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479470278801</updated>
-      <workItem from="1479470280728" duration="6730000" />
+      <workItem from="1479470280728" duration="8364000" />
     </task>
     <servers />
   </component>
@@ -607,7 +607,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6730000" />
+    <option name="totallyTimeSpent" value="8364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -757,17 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Entity/Version.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#88#0#PHP" expanded="true" />
-            <element signature="e#124#156#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/server/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -811,14 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/server/showversions.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testServerBundle/Repository/SoftwareRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -827,23 +808,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php">
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Entity/Version.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+        <state relative-caret-position="267">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <element signature="e#47#82#0#PHP" expanded="true" />
+            <element signature="e#7#88#0#PHP" expanded="true" />
+            <element signature="e#124#156#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testServerBundle/Entity/Server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="211">
+          <caret line="162" column="29" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
           <folding>
             <element signature="e#7#88#0#PHP" expanded="true" />
             <element signature="e#124#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/server/showversions.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testServerBundle/Controller/ServerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="142" column="40" selection-start-line="142" selection-start-column="40" selection-end-line="142" selection-end-column="40" />
+          <folding>
+            <element signature="e#47#82#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

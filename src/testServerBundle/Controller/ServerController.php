@@ -140,7 +140,7 @@ class ServerController extends Controller
     public function listversionsAction(Server $server)
     {
 
-        $versions=$server->get;
+        $versions=$server->getVersions();
 
         return $this->render('server/showversions.html.twig', array(
             'server' => $server,
